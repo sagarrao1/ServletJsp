@@ -18,8 +18,8 @@ public class ListTodoServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {			
 		
-		String todoName = request.getParameter("todoName");
-//		System.out.println(todoName);
+//		String todoName = request.getSession().getAttribute("todoName");
+//		System.out.println("todoName:"+todoName);
 		
 		request.setAttribute("todos", todoService.retriveTodos());
 		request.getRequestDispatcher("/WEB-INF/views/list-todo.jsp").forward(request, response);

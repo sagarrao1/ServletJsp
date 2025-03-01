@@ -29,7 +29,7 @@ public class DeletTodoServlet extends HttpServlet {
 //		another way of deleting object
 		todoService.deleteTodoObj(new Todo(deleteTodo,deleteCategory));
 		
-		response.sendRedirect("/list-todo.do");
+		response.sendRedirect("/servletJsp-web-app/list-todo.do");
 		
 	}
 	

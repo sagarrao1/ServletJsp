@@ -4,7 +4,7 @@
 
 <div class="container">
 	Your New Action Item:
-	<form action="/add-todo.do" method="post">
+	<form action="/servletJsp-web-app/add-todo.do" method="post">
 		<fieldset class="form-group">
 			<label> Description:</label> <input type="text" name="todoName"
 				class="form-control" />

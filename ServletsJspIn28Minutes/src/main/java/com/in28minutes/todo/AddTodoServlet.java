@@ -29,7 +29,7 @@ public class AddTodoServlet extends HttpServlet {
 		String aadCategory=request.getParameter("category");
 		todoService.addTodo(addTodo, aadCategory);
 			
-		response.sendRedirect("/list-todo.do");
+		response.sendRedirect("/servletJsp-web-app/list-todo.do");
 	}
 
 }

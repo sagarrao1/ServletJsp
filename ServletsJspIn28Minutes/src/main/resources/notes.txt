@@ -1,4 +1,15 @@
 
+url
+
+http://localhost:8080/servletJsp-web-app/login.jsp
+
+--username and password
+in28Minutes 
+dummy
+
+
+
+
 
 28minutes github url for maven course
 

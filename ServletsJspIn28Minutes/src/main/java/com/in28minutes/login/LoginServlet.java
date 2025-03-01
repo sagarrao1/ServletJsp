@@ -46,9 +46,10 @@ public class LoginServlet extends HttpServlet {
 			throws ServletException, IOException {
 
 		request.setAttribute("name", request.getParameter("name"));
+		System.out.println("login.do name:"+request.getParameter("name"));
 		request.setAttribute("password", request.getParameter("password"));
 
-		request.getRequestDispatcher("/WEB-INF/views/login.jsp").forward(request, response);
+		request.getRequestDispatcher("/login.jsp").forward(request, response);
 
 //		PrintWriter out = response.getWriter();
 //		out.println("<html>");
@@ -67,16 +68,18 @@ public class LoginServlet extends HttpServlet {
 
 		String name = request.getParameter("name");
 		String password = request.getParameter("password");
+		System.out.println(" login servlet doPOst");
 
 		boolean isUservalid = userValidationService.isUservalid(name, password);
+		System.out.println(isUservalid);
 		
 		if (isUservalid) {
 			request.getSession().setAttribute("name", name);
-			response.sendRedirect("/list-todo.do");
+			response.sendRedirect("/servletJsp-web-app/list-todo.do");
 			
 		} else {
 			request.setAttribute("errorMessage", "Invalid Login details");
-			request.getRequestDispatcher("/WEB-INF/views/login.jsp").forward(request, response);
+			request.getRequestDispatcher("/login.jsp").forward(request, response);
 
 		}
 

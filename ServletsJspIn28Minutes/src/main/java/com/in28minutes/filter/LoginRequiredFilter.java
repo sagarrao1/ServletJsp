@@ -27,8 +27,8 @@ public class LoginRequiredFilter implements Filter {
 
 		HttpServletRequest request = (HttpServletRequest) servletRequest;
 
-		System.out.println(request.getRequestURI());
-		System.out.println("name= "+request.getSession().getAttribute("name"));
+//		System.out.println(request.getRequestURI());
+//		System.out.println("name= "+request.getSession().getAttribute("name"));
 		
 		if (request.getSession().getAttribute("name") != null) {
 			System.out.println("in if of doFilter method of LoginRequiredFilter");

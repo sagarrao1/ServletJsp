@@ -23,14 +23,14 @@
 					<td>${todo.name}</td>
 					<td>${todo.category}</td>
 					<td><a class="btn btn-danger"
-						href="/delete-todo.do?deleteTodo=${todo.name}&category=${todo.category}">Delete</a></td>
+						href="/servletJsp-web-app/delete-todo.do?deleteTodo=${todo.name}&category=${todo.category}">Delete</a></td>
 
 				</tr>
 			</c:forEach>
 		</tbody>
 
 	</table>
-	</br> <a class="btn btn-success" href="/add-todo.do">Add New Item</a>
+	</br> <a class="btn btn-success" href="/servletJsp-web-app/add-todo.do">Add New Item</a>
 </div>
 
 <%@ include file="../common/footer.jspf"%>
